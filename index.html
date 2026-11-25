@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clynto: AR, VR and Web3 games</title>
+  <meta name="description" content="Clynto is an independent games studio building AR, VR and Web3 games for the world around you. Makers of Finding Poppy, out now on iOS and Android.">
+  <link rel="canonical" href="https://clynto.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clynto.com/">
+  <meta property="og:title" content="Clynto: AR, VR and Web3 games">
+  <meta property="og:description" content="Games for the world around you. Makers of Finding Poppy, out now on iOS and Android.">
+  <meta property="og:image" content="https://clynto.com/assets/poppy-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b0b10">
+  <style>
+    :root {
+      --bg: #0b0b10; --panel: #13131a; --line: #23232e;
+      --text: #f4f1ea; --muted: #9c9aa6; --accent: #2ed974;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg); color: var(--text);
+      font: 400 17px/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    header { padding: 28px 0; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; text-decoration: none; }
+    .wordmark svg { width: 30px; height: 30px; }
+    .nav-link { color: var(--muted); text-decoration: none; font-size: 15px; }
+    .nav-link:hover { color: var(--text); }
+
+    .hero { padding: 96px 0 88px; }
+    .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+    h1 { margin-top: 18px; font-size: clamp(40px, 7vw, 76px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 700; max-width: 14ch; }
+    .lede { margin-top: 24px; max-width: 46ch; color: var(--muted); font-size: 19px; }
+
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .pillar { padding: 32px 28px 32px 0; }
+    .pillar + .pillar { padding-left: 28px; border-left: 1px solid var(--line); }
+    .pillar h2 { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+    .pillar p { margin-top: 8px; color: var(--muted); font-size: 15px; }
+
+    .featured { padding: 96px 0; }
+    .section-label { color: var(--muted); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; }
+    .card {
+      margin-top: 24px; display: grid; grid-template-columns: 1fr; gap: 0;
+      background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+    }
+    .card-body { padding: 48px; display: flex; flex-direction: column; }
+    .game-id { display: flex; align-items: center; gap: 14px; }
+    .game-id img { width: 56px; height: 56px; border-radius: 14px; }
+    .game-id h3 { font-size: 28px; letter-spacing: -0.02em; line-height: 1.1; }
+    .game-id span { color: var(--muted); font-size: 14px; }
+    .card-body p.desc { margin-top: 22px; color: var(--muted); max-width: 44ch; }
+    .stores { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px;
+      border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px;
+      background: var(--text); color: var(--bg); transition: opacity .15s;
+    }
+    .store.alt { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .store:hover { opacity: .85; }
+    .store svg { width: 18px; height: 18px; }
+    .site-link { margin-top: auto; padding-top: 32px; color: var(--muted); font-size: 15px; text-decoration: none; }
+    .site-link:hover { color: var(--accent); }
+    .card-media { order: -1; aspect-ratio: 16 / 9; background: #07070a; }
+    .card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    .contact { padding: 0 0 96px; }
+    .contact h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -0.02em; font-weight: 600; }
+    .contact p { margin-top: 10px; color: var(--muted); }
+    .contact a.mail { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: 4px; }
+
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+    @media (max-width: 820px) {
+      .hero { padding: 56px 0 56px; }
+      .pillars { grid-template-columns: 1fr; }
+      .pillar, .pillar + .pillar { padding: 24px 0; border-left: 0; }
+      .pillar + .pillar { border-top: 1px solid var(--line); }
+      .featured { padding: 64px 0; }
+      .card-body { padding: 32px 24px; }
+      .contact { padding-bottom: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="Clynto home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M43.5 21.5a15 15 0 1 0 0 21" fill="none" stroke="#f4f1ea" stroke-width="6" stroke-linecap="round"/><circle cx="45" cy="32" r="3.6" fill="#2ed974"/></svg>
+        Clynto
+      </a>
+      <a class="nav-link" href="mailto:hello@clynto.com">hello@clynto.com</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Independent games studio</p>
+        <h1>Games for the world around you.</h1>
+        <p class="lede">Clynto builds AR, VR and Web3 games that turn real places into play, from your living room to the streets of a city you have never visited.</p>
+      </div>
+    </section>
+
+    <section class="wrap" aria-label="What we build">
+      <div class="pillars">
+        <div class="pillar">
+          <h2>Augmented reality</h2>
+          <p>Characters that hide behind your couch and wait at the end of your street.</p>
+        </div>
+        <div class="pillar">
+          <h2>Virtual reality</h2>
+          <p>Worlds you can step inside and explore at full scale.</p>
+        </div>
+        <div class="pillar">
+          <h2>Web3</h2>
+          <p>Game economies where players genuinely own what they earn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="poppy-title">
+      <div class="wrap">
+        <p class="section-label">Now playing</p>
+        <article class="card">
+          <div class="card-body">
+            <div class="game-id">
+              <img src="/assets/poppy-icon.png" alt="" width="56" height="56">
+              <div>
+                <h3 id="poppy-title">Finding Poppy</h3>
+                <span>AR adventure · iOS and Android</span>
+              </div>
+            </div>
+            <p class="desc">Sneaky black cats are hiding in the real world around you. Follow their glowing eyes, toss treats to win their trust, and rescue more than 200 species in augmented reality. Free to play.</p>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/us/app/finding-poppy-ar-game/id6814992142?ct=clynto.com&amp;mt=8" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.14-2.77.83-3.49.83-.72 0-1.83-.81-3-.79-1.55.02-2.97.9-3.77 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.09 1.75-.96 2.79 1.02.08 2.05-.52 2.68-1.27z"/></svg>
+                App Store
+              </a>
+              <a class="store alt" href="https://play.google.com/store/apps/details?id=com.findingpoppy.app&amp;referrer=utm_source%3Dclynto.com%26utm_medium%3Dwebsite%26utm_campaign%3Dstudio_site" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 1.8c-.3.3-.4.8-.4 1.4v17.6c0 .6.2 1.1.4 1.4l.1.1 9.9-9.9v-.2L3.7 1.7z"/><path fill="#FFCE00" d="M16.9 15.7l-3.3-3.3v-.2l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2z"/><path fill="#FF3A44" d="M17 15.6l-3.4-3.4-10 10c.4.4 1 .4 1.7.1L17 15.6"/><path fill="#00F076" d="M17 8.9L5.3 2.3c-.7-.4-1.3-.3-1.7.1l10 10z"/></svg>
+                Google Play
+              </a>
+            </div>
+            <a class="site-link" href="https://www.findingpoppy.com/?utm_source=clynto.com&amp;utm_medium=website&amp;utm_campaign=studio_site" target="_blank" rel="noopener">findingpoppy.com &rarr;</a>
+          </div>
+          <div class="card-media">
+            <img src="/assets/poppy-poster.jpg" alt="Finding Poppy: a player kneels in a sunlit plaza and offers a treat to Poppy, a small black cat, while her phone shows the cat in AR" loading="lazy" width="1600" height="900">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="wrap">
+        <h2>Partnerships and press</h2>
+        <p>For collaborations, tourism and destination partnerships, licensing or press, write to <a class="mail" href="mailto:hello@clynto.com">hello@clynto.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Clynto LLC · San Ramon, California</span>
+      <span><a href="https://www.findingpoppy.com/privacy">Finding Poppy privacy</a> · <a href="mailto:hello@clynto.com">Contact</a></span>
+    </div>
+  </footer>
+</body>
+</html>
